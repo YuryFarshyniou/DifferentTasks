@@ -1,7 +1,7 @@
-package examples.by.yurachel.multithreading.lock.main;
+package examples.by.yurachel.multithreading.lock.ex_1_blinov.main;
 
-import examples.by.yurachel.multithreading.lock.entity.DoubleResource;
-import examples.by.yurachel.multithreading.lock.entity.ResThread;
+import examples.by.yurachel.multithreading.lock.ex_1_blinov.entity.DoubleResource;
+import examples.by.yurachel.multithreading.lock.ex_1_blinov.entity.ResThread;
 
 import java.util.concurrent.TimeUnit;
 

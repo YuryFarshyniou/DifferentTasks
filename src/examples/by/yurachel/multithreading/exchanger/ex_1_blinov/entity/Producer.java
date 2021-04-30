@@ -1,4 +1,4 @@
-package examples.by.yurachel.multithreading.exchanger.entity;
+package examples.by.yurachel.multithreading.exchanger.ex_1_blinov.entity;
 
 public class Producer extends Subject implements Runnable {
 

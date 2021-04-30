@@ -1,4 +1,4 @@
-package examples.by.yurachel.multithreading.lock.entity;
+package examples.by.yurachel.multithreading.lock.ex_1_blinov.entity;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package examples.by.yurachel.multithreading.exchanger.entity;
+package examples.by.yurachel.multithreading.exchanger.ex_1_blinov.entity;
 
 public class Consumer extends Subject implements Runnable {
     public Consumer(String name, Item item) {
