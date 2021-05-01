@@ -7,7 +7,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 
 public class Storage implements Iterable<Item> {
     public static final int DEFAULT_STORAGE_CAPACITY = 20;
-    private Queue<Item> goods = null;
+    private final Queue<Item> goods;
 
     private Storage() {
         goods = new LinkedBlockingDeque<>(DEFAULT_STORAGE_CAPACITY);
@@ -18,8 +18,7 @@ public class Storage implements Iterable<Item> {
     }
 
     public static Storage createStorage(int capacity) {
-        Storage storage = new Storage(capacity);
-        return storage;
+        return new Storage(capacity);
     }
 
     public static Storage createStorage(int capacity, List<Item> goods) {
