@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class FirstSQLMain {
     public static void main(String[] args) {
         try (Connection con = ConnectorDB.getConnection(); // Устанавливаем соединение с базой данных.
              Statement statement = con.createStatement(); // Объект Statement используется для выполнения запросов.
@@ -35,7 +35,7 @@ public class Main {
                 int id = rs.getInt(1); //Позволяет извлекать значения поля по названию поля,либо по индексу колонки.
                 int phone = rs.getInt(3);
                 String name = rs.getString(2);
-                list.add(new Abonent(id, phone, name));
+                list.add(new Abonent(id, name,phone));
             }
             if (list.size() > 0) {
                 System.out.println(list);

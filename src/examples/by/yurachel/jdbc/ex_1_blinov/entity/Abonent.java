@@ -2,15 +2,15 @@ package examples.by.yurachel.jdbc.ex_1_blinov.entity;
 
 public class Abonent extends Entity {
     private int phone;
-    private String name;
+    private String lastName;
 
     public Abonent() {
     }
 
-    public Abonent(int id, int phone, String name) {
+    public Abonent(int id, String name, int phone) {
         super(id);
+        this.lastName = name;
         this.phone = phone;
-        this.name = name;
     }
 
     public int getPhone() {
@@ -21,19 +21,19 @@ public class Abonent extends Entity {
         this.phone = phone;
     }
 
-    public String getName() {
-        return name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override
     public String toString() {
         return "Abonent{" + "id: " + getId() +
                 ", phone=" + phone +
-                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
     }
 }
