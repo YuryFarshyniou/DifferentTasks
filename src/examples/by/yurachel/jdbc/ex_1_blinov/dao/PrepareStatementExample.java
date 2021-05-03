@@ -6,11 +6,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class DataBaseHelper {
+public class PrepareStatementExample {
     private final static String SQL_INSERT = "INSERT INTO phonebook(idphonebook, lastname, phone ) VALUES(?,?,?) "; // Добавление новых обектов в базу данных.
     private Connection connection;
 
-    public DataBaseHelper() throws SQLException {
+    public PrepareStatementExample() throws SQLException {
         connection = ConnectorDB.getConnection();
 
     }

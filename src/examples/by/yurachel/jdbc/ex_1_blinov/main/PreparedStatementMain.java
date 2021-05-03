@@ -1,6 +1,6 @@
 package examples.by.yurachel.jdbc.ex_1_blinov.main;
 
-import examples.by.yurachel.jdbc.ex_1_blinov.dao.DataBaseHelper;
+import examples.by.yurachel.jdbc.ex_1_blinov.dao.PrepareStatementExample;
 import examples.by.yurachel.jdbc.ex_1_blinov.entity.Abonent;
 
 import java.sql.PreparedStatement;
@@ -17,10 +17,10 @@ public class PreparedStatementMain {
             }
         };
 
-        DataBaseHelper helper = null;
+        PrepareStatementExample helper = null;
         PreparedStatement ps = null;
         try {
-            helper = new DataBaseHelper();
+            helper = new PrepareStatementExample();
             ps = helper.getPreparedStatement();
             for (Abonent abonent : lists) {
                 helper.insertAbonent(ps, abonent);
