@@ -1,4 +1,4 @@
-package examples.by.yurachel.jdbc.ex_1_blinov.dao;
+package examples.by.yurachel.jdbc.ex_1_blinov.dao.dao_method_level;
 
 import examples.by.yurachel.jdbc.ex_1_blinov.entity.Abonent;
 
