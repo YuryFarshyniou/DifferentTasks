@@ -29,4 +29,7 @@ public class ConnectionPool {
         Connection connection = dataSource.getConnection();
         return connection;
     }
+    public static void  close(Connection connection) throws SQLException {
+        connection.close();
+    }
 }
