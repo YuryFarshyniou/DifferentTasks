@@ -1,8 +1,7 @@
-package examples.by.yurachel.web.ex_blinov.def_name_real_res_by_id.main;
+package examples.by.yurachel.web.ex_blinov.small_ex.def_name_real_res_by_id.main;
 
 import java.io.IOException;
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package examples.by.yurachel.web.ex_blinov.get_id_by_adress.main;
+package examples.by.yurachel.web.ex_blinov.small_ex.get_id_by_adress.main;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

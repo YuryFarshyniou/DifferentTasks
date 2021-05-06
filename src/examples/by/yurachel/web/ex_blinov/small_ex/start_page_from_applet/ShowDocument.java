@@ -1,4 +1,4 @@
-package examples.by.yurachel.web.ex_blinov.start_page_from_applet;
+package examples.by.yurachel.web.ex_blinov.small_ex.start_page_from_applet;
 
 import javax.swing.*;
 import java.awt.*;

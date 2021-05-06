@@ -1,4 +1,4 @@
-package examples.by.yurachel.web.ex_blinov.read_doc_fr_int.main;
+package examples.by.yurachel.web.ex_blinov.small_ex.read_doc_fr_int.main;
 
 import java.io.BufferedReader;
 import java.io.IOException;
