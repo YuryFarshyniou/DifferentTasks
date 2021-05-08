@@ -1,0 +1,21 @@
+<?xml version="1.0" enncoding="UTF-8"?>  <!--Инструкция по обработке -->
+<students>
+    <student login="Yurachel" faculty="mmf">
+        <name>Yura Farshinev</name>
+        <telephone>2453256</telephone>
+        <address>
+            <country>Belarus</country>
+            <city>Mogilev</city>
+            <street>Nepokorenich</street>
+        </address>
+    </student>
+    <student login="Baha" faculty="eeg">
+        <name>Shild error</name>
+        <telephone>6789056</telephone>
+        <address>
+            <country>Belarus</country>
+            <city>Mogilev</city>
+            <street>Shmidta</street>
+        </address>
+    </student>
+</students>
