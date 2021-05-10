@@ -10,7 +10,10 @@ import javax.xml.bind.Marshaller;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
+
+
 public class MarshalMain {
+    private static final String xmlPath = "src\\examples\\by\\yurachel\\xml\\blinov\\marsh_demarsh\\stud_marsh.xml";
     public static void main(String[] args) {
         try {
             JAXBContext context = JAXBContext.newInstance(Students.class);
@@ -27,7 +30,7 @@ public class MarshalMain {
                     this.add(s2);
                 }
             };
-            m.marshal(st, new FileOutputStream("stud_marsh.xml"));
+            m.marshal(st, new FileOutputStream(xmlPath));
             m.marshal(st, System.out);//опия на консоль.
             System.out.println("XML was created.");
         } catch (FileNotFoundException e) {
