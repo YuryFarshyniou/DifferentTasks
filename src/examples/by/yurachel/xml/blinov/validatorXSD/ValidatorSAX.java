@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class ValidatorSAX {
     public static void main(String[] args) {
-        String fileName = "C:\\Java\\DifferentTasks\\src\\examples\\by\\yurachel\\xml\\blinov\\students.xml";
+        String fileName = "C:\\Java\\DifferentTasks\\src\\examples\\by\\yurachel\\xml\\blinov\\students.xml.xml";
         String schemaNAme = "C:\\Java\\DifferentTasks\\src\\examples\\by\\yurachel\\xml\\blinov\\xsdStsudents.xsd";
         String logName = "C:\\Java\\DifferentTasks\\src\\examples\\by\\yurachel\\xml\\blinov\\loger.txt";
         Schema schema = null;

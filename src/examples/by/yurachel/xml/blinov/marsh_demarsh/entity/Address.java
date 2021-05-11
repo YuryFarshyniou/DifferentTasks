@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
         "street"
 })
 public class Address {
-    private String country;
     private String city;
+    private String country;
     private String street;
 
     public Address() {
     }
 
-    public Address(String country, String city, String street) {
-        this.country = country;
+    public Address( String city,String country, String street) {
         this.city = city;
+        this.country = country;
         this.street = street;
     }
 

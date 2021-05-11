@@ -15,7 +15,7 @@ public class UnMarshallMain {
 
     public static void main(String[] args) {
         try {
-            JAXBContext jc = JAXBContext.newInstance(Student.class);
+            JAXBContext jc = JAXBContext.newInstance(Students.class);
             Unmarshaller m = jc.createUnmarshaller();
             FileReader fr = new FileReader(xmlPath);
             Students students = (Students) m.unmarshal(fr);

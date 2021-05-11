@@ -14,7 +14,7 @@ import java.io.IOException;
 public class ValidatorSAXXSD {
     public static void main(String[] args) {
         String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
-        String fileName = "C:\\Java\\DifferentTasks\\src\\examples\\by\\yurachel\\xml\\blinov\\students.xml";
+        String fileName = "C:\\Java\\DifferentTasks\\src\\examples\\by\\yurachel\\xml\\blinov\\students.xml.xml";
         String schemaName = "C:\\Java\\DifferentTasks\\src\\examples\\by\\yurachel\\xml\\blinov\\xsdStsudents.xsd";
         SchemaFactory factory = SchemaFactory.newInstance(language);
         File schemaLocation = new File(schemaName);
