@@ -2,7 +2,7 @@ package examples.by.yurachel.xml.blinov.sax_parser.second_sax_ex;
 
 public enum StudentEnum {
     STUDENTS("students.xml"),
-    LOGIN("LOGIN"),
+    LOGIN("login"),
     FACULTY("faculty"),
     STUDENT("student"),
     NAME("name"),
