@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student faculty="mmf">
+        <name>Yura Farshinev</name>
+        <address country="Belarus" city="Mogilev" street="Nepokorenich">
+            <telephone number="2453256"/>
+        </address>
+    </student>
+    <student faculty="eeg">
+        <name>Shild error</name>
+        <address country="Belarus" city="Mogilev" street="Shmidta">
+            <telephone number="6789056"/>
+        </address>
+    </student>
+</students>
