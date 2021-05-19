@@ -1,6 +1,8 @@
 package examples.by.yurachel.blinov.jsp.jsp_servlet_jsp.factory;
 
 import examples.by.yurachel.blinov.jsp.jsp_servlet_jsp.command.ActionCommand;
+import examples.by.yurachel.blinov.jsp.jsp_servlet_jsp.command.command_impl.EmptyCommand;
+import examples.by.yurachel.blinov.jsp.jsp_servlet_jsp.resources.MessageManager;
 import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.Locale;
@@ -23,7 +25,7 @@ public class ActionFactory {
         //Получение объекта ,соответствующего команде.
         try {
             CommandEnum currentEnum = CommandEnum.valueOf(action.toUpperCase(Locale.ROOT));
-            current = currentEnum.getCurrent();
+            current = currentEnum.getCurrentCommand();
         } catch (IllegalArgumentException e) {
             request.setAttribute("wrongAction", action +
                     MessageManager.getProperty("message.wrongAction"));
