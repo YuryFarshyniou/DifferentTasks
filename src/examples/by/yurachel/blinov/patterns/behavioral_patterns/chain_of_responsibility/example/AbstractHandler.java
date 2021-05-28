@@ -2,7 +2,7 @@ package examples.by.yurachel.blinov.patterns.behavioral_patterns.chain_of_respon
 
 public abstract class AbstractHandler {
     protected MapEmployee db;
-    protected AbstractHandler successor = DefaultHandleRequest.getHandleRequest();
+    protected AbstractHandler successor = DefaultHandlerRequest.getHandlerRequest();
 
     public AbstractHandler(AbstractHandler successor) {
         this.db = new MapEmployee();
@@ -29,6 +29,23 @@ public abstract class AbstractHandler {
     }
 
     private static class DefaultHandlerRequest extends AbstractHandler {
-        private static DefaultHandleRequest handler = new DefaultHandlerRequest();
+        private static DefaultHandlerRequest handler = new DefaultHandlerRequest();
+
+        private DefaultHandlerRequest() {
+        }
+
+        public static DefaultHandlerRequest getHandlerRequest() {
+            return handler;
+        }
+
+        @Override
+        public void handleRequest(Employee employee) {
+            // Default handler, if its exists.
+        }
+
+        @Override
+        public void chain(Employee user) {
+            // always empty
+        }
     }
 }
