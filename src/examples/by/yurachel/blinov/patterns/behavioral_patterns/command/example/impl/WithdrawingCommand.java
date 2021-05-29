@@ -2,6 +2,7 @@ package examples.by.yurachel.blinov.patterns.behavioral_patterns.command.example
 
 import examples.by.yurachel.blinov.patterns.behavioral_patterns.command.example.CommandTypes;
 import examples.by.yurachel.blinov.patterns.behavioral_patterns.command.example.ICommand;
+import examples.by.yurachel.blinov.patterns.behavioral_patterns.command.example.Receiver;
 
 public class WithdrawingCommand implements ICommand {
     private Receiver receiver;
