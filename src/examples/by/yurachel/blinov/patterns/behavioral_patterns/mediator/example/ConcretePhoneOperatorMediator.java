@@ -2,6 +2,8 @@ package examples.by.yurachel.blinov.patterns.behavioral_patterns.mediator.exampl
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public class ConcretePhoneOperatorMediator implements PhoneOperatorMediator {
     private Set<PhoneSubscriber> subscribers;
