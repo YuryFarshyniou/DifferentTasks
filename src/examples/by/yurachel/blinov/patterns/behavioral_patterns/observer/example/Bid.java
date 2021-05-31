@@ -36,7 +36,7 @@ public class Bid {
 
     public void addObserver(AuctionObserver observer) {
         this.observer = observer;
-        observer.addObservable(this);
+        observer.addObserver(this);
     }
 
     public void removeObserver() {
