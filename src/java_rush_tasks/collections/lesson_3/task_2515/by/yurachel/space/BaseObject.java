@@ -43,7 +43,7 @@ public abstract  class BaseObject {
     /**
      * Метод рисует свой объект на "канвасе".
      */
-    public void draw(Canvas canvas) {
+    public  void draw(Canvas canvas) {
         //do nothing
     }
 
