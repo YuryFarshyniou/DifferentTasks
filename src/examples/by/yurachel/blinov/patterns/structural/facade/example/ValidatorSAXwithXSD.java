@@ -24,6 +24,11 @@ public class ValidatorSAXwithXSD {
             Validator validator = schema.newValidator();
             Source source = new StreamSource(filename);
             StudentErrorHandler sh = new StudentErrorHandler();
+            validator.setErrorHandler(sh);
+            validator.validate(source);
+            System.out.println(filename + " validating is ended correctly.");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
