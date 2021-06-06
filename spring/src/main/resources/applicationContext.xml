@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:property-placeholder location="vetClinic.properties"/>
+    <bean id="catBean"
+          class="by.yurachel.ioc_example.entity.impl.Cat"
+          init-method="init"
+          destroy-method="destroy"
+          factory-method="factoryCat">
+    </bean>
+    <bean id="dogBean"
+          class="by.yurachel.ioc_example.entity.impl.Dog"
+          scope="prototype">
+    </bean>
+    <bean id="hamsterBean"
+          class="by.yurachel.ioc_example.entity.impl.Hamster"
+          scope="prototype">
+    </bean>
+
+    <util:list id="animalList"
+               list-class="java.util.ArrayList"
+               value-type="by.yurachel.ioc_example.entity.Animal"
+               scope="prototype">
+        <ref bean="catBean"/>
+        <ref bean="dogBean"/>
+        <ref bean="hamsterBean"/>
+    </util:list>
+
+
+    <bean id="vetClinic"
+          class="by.yurachel.ioc_example.entity.VetClinic"
+          scope="prototype">
+        <property name="animal" ref="catBean"/>
+        <property name="animals" ref="animalList"/>
+        <property name="name" value="Kakadu"/>
+        <property name="year" value="2021"/>
+    </bean>
+</beans>
