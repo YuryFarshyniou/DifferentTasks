@@ -1,6 +1,6 @@
-package by.yurachel.ioc_example.entity.impl;
+package by.yurachel.xml_example.entity.impl;
 
-import by.yurachel.ioc_example.entity.Animal;
+import by.yurachel.xml_example.entity.Animal;
 
 public class Cat implements Animal {
     private Cat() {

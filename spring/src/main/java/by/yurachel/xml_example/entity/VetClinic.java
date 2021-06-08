@@ -1,4 +1,4 @@
-package by.yurachel.ioc_example.entity;
+package by.yurachel.xml_example.entity;
 
 import java.util.ArrayList;
 import java.util.List;

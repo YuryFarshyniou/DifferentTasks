@@ -3,6 +3,9 @@ package examples.by.yurachel.blinov.multithreading.lock.ex_1_blinov.main;
 import examples.by.yurachel.blinov.multithreading.lock.ex_1_blinov.entity.DoubleResource;
 import examples.by.yurachel.blinov.multithreading.lock.ex_1_blinov.entity.ResThread;
 
+import java.util.Arrays;
+import java.util.IntSummaryStatistics;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Main {

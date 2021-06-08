@@ -10,38 +10,41 @@
 http://www.springframework.org/schema/util
 http://www.springframework.org/schema/util/spring-util.xsd">
 
+
+    <context:component-scan base-package="by.yurachel.annotation_example"/>
     <context:property-placeholder location="vetClinic.properties"/>
-    <bean id="catBean"
-          class="by.yurachel.ioc_example.entity.impl.Cat"
-          init-method="init"
-          destroy-method="destroy"
-          factory-method="factoryCat">
-    </bean>
-    <bean id="dogBean"
-          class="by.yurachel.ioc_example.entity.impl.Dog"
-          scope="prototype">
-    </bean>
-    <bean id="hamsterBean"
-          class="by.yurachel.ioc_example.entity.impl.Hamster"
-          scope="prototype">
-    </bean>
+    <!--    <context:property-placeholder location="vetClinic.properties"/>-->
+    <!--    <bean id="catBean"-->
+    <!--          class="by.yurachel.xml_example.entity.impl.Cat"-->
+    <!--          init-method="init"-->
+    <!--          destroy-method="destroy"-->
+    <!--          factory-method="factoryCat">-->
+    <!--    </bean>-->
+    <!--    <bean id="dogBean"-->
+    <!--          class="by.yurachel.xml_example.entity.impl.Dog"-->
+    <!--          scope="prototype">-->
+    <!--    </bean>-->
+    <!--    <bean id="hamsterBean"-->
+    <!--          class="by.yurachel.xml_example.entity.impl.Hamster"-->
+    <!--          scope="prototype">-->
+    <!--    </bean>-->
 
-    <util:list id="animalList"
-               list-class="java.util.ArrayList"
-               value-type="by.yurachel.ioc_example.entity.Animal"
-               scope="prototype">
-        <ref bean="catBean"/>
-        <ref bean="dogBean"/>
-        <ref bean="hamsterBean"/>
-    </util:list>
+    <!--    <util:list id="animalList"-->
+    <!--               list-class="java.util.ArrayList"-->
+    <!--               value-type="by.yurachel.xml_example.entity.Animal"-->
+    <!--               scope="prototype">-->
+    <!--        <ref bean="catBean"/>-->
+    <!--        <ref bean="dogBean"/>-->
+    <!--        <ref bean="hamsterBean"/>-->
+    <!--    </util:list>-->
 
 
-    <bean id="vetClinic"
-          class="by.yurachel.ioc_example.entity.VetClinic"
-          scope="prototype">
-        <property name="animal" ref="catBean"/>
-        <property name="animals" ref="animalList"/>
-        <property name="name" value="Kakadu"/>
-        <property name="year" value="2021"/>
-    </bean>
+    <!--    <bean id="vetClinic"-->
+    <!--          class="by.yurachel.xml_example.entity.VetClinic"-->
+    <!--          scope="prototype">-->
+    <!--        <property name="animal" ref="catBean"/>-->
+    <!--        <property name="animals" ref="animalList"/>-->
+    <!--        <property name="name" value="Kakadu"/>-->
+    <!--        <property name="year" value="2021"/>-->
+    <!--    </bean>-->
 </beans>

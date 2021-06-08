@@ -1,4 +1,4 @@
-package by.yurachel.ioc_example.entity;
+package by.yurachel.xml_example.entity;
 
 public interface Animal {
     String eat();

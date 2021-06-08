@@ -1,8 +1,8 @@
-package by.yurachel.ioc_example;
+package by.yurachel.xml_example;
 
-import by.yurachel.ioc_example.entity.Animal;
-import by.yurachel.ioc_example.entity.VetClinic;
-import by.yurachel.ioc_example.entity.impl.Cat;
+import by.yurachel.xml_example.entity.Animal;
+import by.yurachel.xml_example.entity.VetClinic;
+import by.yurachel.xml_example.entity.impl.Cat;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
