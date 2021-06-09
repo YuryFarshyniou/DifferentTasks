@@ -21,3 +21,5 @@ public Cat( @Qualifier("cat")Animal animal, @Qualifier("name") String name){}
 @Configuration - Помечает Java class,который мы хотим использовать для конфигурации Spring приложения.
 
 @Bean - В configuration классе помечается бин как в xml файле.
+
+
