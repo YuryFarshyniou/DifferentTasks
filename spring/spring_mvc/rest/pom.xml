@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>by.yurachel</groupId>
-    <artifactId>spring_mvc</artifactId>
+    <artifactId>rest</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>spring_mvc</name>
+    <name>rest</name>
     <packaging>war</packaging>
 
     <properties>
@@ -17,7 +17,6 @@
         <spring.version>5.3.7</spring.version>
         <thymeleaf.version>3.0.12.RELEASE</thymeleaf.version>
         <jakarta.servlet.jsp.jstl>2.0.0</jakarta.servlet.jsp.jstl>
-
     </properties>
 
     <dependencies>
@@ -26,11 +25,6 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.web</groupId>
-            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-            <version>${jakarta.servlet.jsp.jstl}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -74,8 +68,6 @@
             <artifactId>thymeleaf-spring5</artifactId>
             <version>${thymeleaf.version}</version>
         </dependency>
-
-
     </dependencies>
 
     <build>

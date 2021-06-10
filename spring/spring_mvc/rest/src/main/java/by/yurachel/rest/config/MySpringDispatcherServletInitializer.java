@@ -1,4 +1,4 @@
-package by.yurachel.spring_mvc.config;
+package by.yurachel.rest.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -10,6 +10,7 @@ public class MySpringDispatcherServletInitializer extends AbstractAnnotationConf
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
+
         return new Class[]{SpringConfig.class};
     }
 

@@ -15,8 +15,8 @@ import java.util.Arrays;
 import java.util.List;
 
 @Configuration
-//@ComponentScan("by.yurachel.annotation_example")
-@PropertySource("classpath:vetClinic.properties")
+@ComponentScan("by.yurachel.annotation_example")
+//@PropertySource("classpath:vetClinic.properties")
 public class SpringConfig {
     @Bean
     public Cat cat() {
