@@ -2,6 +2,7 @@ package by.yurachel.rest.config;
 
 import by.yurachel.rest.controllers.PeopleController;
 import by.yurachel.rest.dao.PersonDao;
+import by.yurachel.rest.models.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -25,12 +26,11 @@ public class SpringConfig implements WebMvcConfigurer {
     @Autowired
     public SpringConfig(ApplicationContext context) {
         this.context = context;
-        System.out.println("Hello from constr config");
     }
+
 
     @Bean
     public SpringResourceTemplateResolver templateResolver() {  // Настраиваем наш Thymeleaf.
-        System.out.println("Hello from method resolver");
         SpringResourceTemplateResolver templateResolver =
                 new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(context);
@@ -42,7 +42,6 @@ public class SpringConfig implements WebMvcConfigurer {
 
     @Bean
     public SpringTemplateEngine templateEngine() {
-        System.out.println("Hello from constr. template");
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
         templateEngine.setEnableSpringELCompiler(true);
@@ -53,7 +52,6 @@ public class SpringConfig implements WebMvcConfigurer {
     public void configureViewResolvers(ViewResolverRegistry registry) {
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
         resolver.setTemplateEngine(templateEngine());
-        System.out.println("Hello from constr. resolvers");
         registry.viewResolver(resolver);
     }
 }

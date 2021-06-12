@@ -5,10 +5,12 @@
 </head>
 <body>
 
-<p th:text="${list}"/>
-<%--<div th:each="person : ${people}">--%>
-<%--    <a th:href="@{people/{id}(id=${person.getId()})}" th:text="${person.getName()}">User </a>--%>
-<%--</div>--%>
+
+<div th:each="person : ${list}">
+    <a th:href="@{people/{id}(id=${person.getId()})}" th:text="${person.getName()}">User </a>
+</div>
+<br/>
+<a href="people/new"> new person</a>
 
 </body>
 </html>
