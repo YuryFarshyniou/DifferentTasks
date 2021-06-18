@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html xmlns:th="https://thymeleaf.org/">
+<html xmlns:th="http://www.thymeleaf.org/" lang="en">
 <head>
     <title>People</title>
 </head>
 <body>
-
+<!--С помощью тега a можно посылать только get запросы.-->
 
 <div th:each="person : ${list}">
     <a th:href="@{people/{id}(id=${person.getId()})}" th:text="${person.getName()}">User </a>
+    <a th:text="${person.getSurname()}">surname</a>
+    <a th:text="${person.getYear()}">year</a>
 </div>
 <br/>
+<hr/>
 <a href="people/new"> new person</a>
+
 
 </body>
 </html>

@@ -3,12 +3,16 @@ package by.yurachel.rest.controllers;
 import by.yurachel.rest.dao.PersonDao;
 import by.yurachel.rest.models.Person;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
+
+/*Урок 22.*ая минута. @ModelAttribute над методом означает,что в каждом методе текущего контроллера добавляется пара ключ-значение.
+ **/
 @Controller
 @RequestMapping("/people")
 public class PeopleController {
@@ -21,7 +25,7 @@ public class PeopleController {
     }
 
 
-    @GetMapping()
+    @GetMapping()// GetMapping пустой,потому что адрес этого метода будет /people.
     public String list(Model model) {
         model.addAttribute("list", personDao.index());
         //Получим всех людей из дао  и передадим на отображение в представление.
@@ -44,7 +48,11 @@ public class PeopleController {
     }
 
     @PostMapping
-    public String create(@ModelAttribute("person") Person person) {
+    public String create(@ModelAttribute("person") @Valid Person person,
+                         BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "people/new";
+        }
         personDao.save(person);
         return "redirect:/people";
     }
@@ -56,9 +64,19 @@ public class PeopleController {
     }
 
     @PatchMapping("/{id}")
-    public String update(@ModelAttribute("person") Person person,
+    public String update(@ModelAttribute("person") @Valid Person person,
+                         BindingResult bindingResult,
                          @PathVariable("id") int id) {
+        if(bindingResult.hasErrors()){
+            return"people/edit";
+        }
         personDao.update(id, person);
+        return "redirect:/people";
+    }
+
+    @DeleteMapping("/{id}")
+    public String delete(@PathVariable("id") int id) {
+        personDao.delete(id);
         return "redirect:/people";
     }
 

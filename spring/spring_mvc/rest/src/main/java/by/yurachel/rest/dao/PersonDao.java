@@ -1,9 +1,7 @@
 package by.yurachel.rest.dao;
 
 import by.yurachel.rest.models.Person;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +13,9 @@ public class PersonDao {
 
     {
         people = new ArrayList<>();
-        people.add(new Person(++PEOPLE_COUNT, "Yura"));
-        people.add(new Person(++PEOPLE_COUNT, "Marsy"));
-        people.add(new Person(++PEOPLE_COUNT, "Vika"));
+        people.add(new Person(++PEOPLE_COUNT, "Yura", "Zyyz", 1994));
+        people.add(new Person(++PEOPLE_COUNT, "Marsy", "Catty", 2020));
+        people.add(new Person(++PEOPLE_COUNT, "Vika", "Moroz", 1994));
     }
 
 
@@ -43,10 +41,17 @@ public class PersonDao {
     public void save(Person person) {
         person.setId(++PEOPLE_COUNT);
         people.add(person);
+        System.out.println(person + " was successfully added!");
     }
 
     public void update(int id, Person person) {
         Person personToBeUpdated = show(id);
         personToBeUpdated.setName(person.getName());
+        personToBeUpdated.setYear(person.getYear());
+        personToBeUpdated.setSurname(person.getSurname());
+    }
+
+    public void delete(int id) {
+        people.removeIf(person -> person.getId() == id);
     }
 }
