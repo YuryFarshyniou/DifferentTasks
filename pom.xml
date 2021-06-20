@@ -23,6 +23,7 @@
         <mockito.version>3.9.0</mockito.version>
         <mysql.version>8.0.24</mysql.version>
         <hibernate.version>5.4.32.Final</hibernate.version>
+        <hibernate.entitymanager.version>5.4.27.Final</hibernate.entitymanager.version>
         <ehcache.version>3.9.4</ehcache.version>
     </properties>
 
@@ -91,10 +92,17 @@
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-ehcache</artifactId>
             <version>${hibernate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.entitymanager.version}</version>
         </dependency>
 
         <dependency>
