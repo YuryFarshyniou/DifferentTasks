@@ -1,6 +1,6 @@
 package examples.by.yurachel.blinov.patterns.behavioral_patterns.observer.example_2;
 
-public class JobSearch {
+public class JobSearchRunner {
     public static void main(String[] args) {
         JavaDeveloperJobSite jobSite = new JavaDeveloperJobSite();
         jobSite.addVacancy("First Java position");
