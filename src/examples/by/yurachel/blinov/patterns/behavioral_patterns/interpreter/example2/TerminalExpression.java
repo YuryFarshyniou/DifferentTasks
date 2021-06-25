@@ -1,6 +1,6 @@
 package examples.by.yurachel.blinov.patterns.behavioral_patterns.interpreter.example2;
 
-public class TerminalExpression implements Expression{
+public class TerminalExpression implements Expression {
     private String data;
 
     public TerminalExpression(String data) {
@@ -9,10 +9,10 @@ public class TerminalExpression implements Expression{
 
     @Override
     public boolean interpret(String context) {
-        if(context.contains(data)){
+        if (context.contains(data)) {
             return true;
         }
-            return false;
+        return false;
 
     }
 }
