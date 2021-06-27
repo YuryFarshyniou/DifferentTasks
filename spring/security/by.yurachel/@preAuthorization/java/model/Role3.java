@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public enum Role2 {
+public enum Role3 {
     USER(new HashSet<Permission>() {
         {
             this.add(Permission.DEVELOPERS_READ);
@@ -22,7 +22,7 @@ public enum Role2 {
 
     private final Set<Permission> permissions;
 
-    Role2(Set<Permission> permissions) {
+    Role3(Set<Permission> permissions) {
         this.permissions = permissions;
     }
 

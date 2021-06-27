@@ -20,7 +20,7 @@ import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/api/v1/developers")//Best practise REST API.
-public class DeveloperRestControllerVer2 {
+public class DeveloperRestControllerVer3 {
     private List<Developer3> developer3s = Stream.of(
             new Developer3(1L, "Ivan", "Ivanov"),
             new Developer3(2L, "Yurachel", "Zyzz"),

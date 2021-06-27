@@ -1,6 +1,6 @@
 package config;
 
-import model.Role2;
+import model.Role3;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -23,9 +23,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()// Механизм защиты от csrf угрозы.
                 .authorizeRequests()
                 .antMatchers("/").permitAll() // На какие паттерны.урлы,кто имет доступ.
-                .antMatchers(HttpMethod.GET, "/api.**").hasAnyRole(Role2.ADMIN.name(), Role2.USER.name())
-                .antMatchers(HttpMethod.POST, "/api.**").hasRole(Role2.ADMIN.name())
-                .antMatchers(HttpMethod.GET, "/api.**").hasRole(Role2.ADMIN.name())
+                .antMatchers(HttpMethod.GET, "/api.**").hasAnyRole(Role3.ADMIN.name(), Role3.USER.name())
+                .antMatchers(HttpMethod.POST, "/api.**").hasRole(Role3.ADMIN.name())
+                .antMatchers(HttpMethod.GET, "/api.**").hasRole(Role3.ADMIN.name())
                 .anyRequest()  // Каждый запрос
                 .authenticated()  // Должен быть аутентифицирован.
                 .and() // С помощью Base64.
@@ -41,12 +41,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 User.builder()
                         .username("admin")
                         .password(passwordEncoder().encode("admin")) // Шифрование пароля.
-                        .roles(Role2.ADMIN.name())
+                        .roles(Role3.ADMIN.name())
                         .build(),
                 User.builder()
                         .username("user")
                         .password(passwordEncoder().encode("user"))
-                        .roles(Role2.USER.name())
+                        .roles(Role3.USER.name())
                         .build()
 
         );

@@ -1,6 +1,6 @@
 package rest;
 
-import model.Developer2;
+import model.Developer3;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,34 +21,34 @@ import java.util.stream.Stream;
 @RestController
 @RequestMapping("/api/v1/developers")//Best practise REST API.
 public class DeveloperRestControllerVer1 {
-    private List<Developer2> developer2s = Stream.of(
-            new Developer2(1L, "Ivan", "Ivanov"),
-            new Developer2(2L, "Yurachel", "Zyzz"),
-            new Developer2(3L, "Marsy", "Cat")
+    private List<Developer3> developer3s = Stream.of(
+            new Developer3(1L, "Ivan", "Ivanov"),
+            new Developer3(2L, "Yurachel", "Zyzz"),
+            new Developer3(3L, "Marsy", "Cat")
     ).collect(Collectors.toList());
 
     @GetMapping
-    public List<Developer2> getAll() {
-        return developer2s;
+    public List<Developer3> getAll() {
+        return developer3s;
     }
 
     @GetMapping("/{id}")
-    public Developer2 getById(@PathVariable Long id) {
-        return developer2s.stream().filter(
+    public Developer3 getById(@PathVariable Long id) {
+        return developer3s.stream().filter(
                 developer -> developer.getId().equals(id))
                 .findFirst()
                 .orElse(null);
     }
 
     @PostMapping
-    public Developer2 create(Developer2 developer2) {
-        this.developer2s.add(developer2);
-        return developer2;
+    public Developer3 create(Developer3 developer3) {
+        this.developer3s.add(developer3);
+        return developer3;
     }
 
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable Long id) {
-        this.developer2s.removeIf(developer -> developer.getId().equals(id));
+        this.developer3s.removeIf(developer -> developer.getId().equals(id));
     }
 
 }
