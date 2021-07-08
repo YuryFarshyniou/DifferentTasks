@@ -17,6 +17,7 @@ public class Developer {
             setActivity(new Sleeping());
         }
     }
+
     public void justDoIt(){
         activity.justDoIt();
     }
