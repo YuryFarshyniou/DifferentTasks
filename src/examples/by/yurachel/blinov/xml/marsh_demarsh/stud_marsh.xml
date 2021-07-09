@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<students>
+    <student login="yurachel" faculty="mmf">
+        <name>Yura</name>
+        <telephone>3456434</telephone>
+        <address>
+            <city>Mogilev</city>
+            <country>BLR</country>
+            <street>Shmidta</street>
+        </address>
+    </student>
+    <student login="semen" faculty="mmf">
+        <name>Kolia</name>
+        <telephone>6785467</telephone>
+        <address>
+            <city>Minck</city>
+            <country>BLR</country>
+            <street>Shmidta</street>
+        </address>
+    </student>
+</students>
