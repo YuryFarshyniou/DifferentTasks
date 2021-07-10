@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Shadow generation</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            text-align: center; /*Выравнивание текста: по центру,лево,вправо и т.д.*/
+            background: #eeeeee;
+        }
+
+        label {
+            display: block; /*Блочные*/
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-weight: bold; /*Жирный шрифт*/
+            letter-spacing: 6px; /*Расстояние между буквами.*/
+            font-size: 40px; /*Размер шрифта.*/
+            color: black;
+            margin-top: 15px; /*Отступ от верхнего элемента*/
+            margin-bottom: 15px; /*Отступ от нижнего элемента*/
+        }
+
+        input[type="range"] {
+            width: 100%; /*Занимает всю ширину карточки.*/
+        }
+
+        input[type="color"] {
+            border: none;
+            background-color: transparent;
+            width: 55px;
+            height: 55px;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+        input[type="color"]:hover { /*Позволяет добавлять эффект при наведении на элемент.*/
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            resize: none; /* Нельзя изменять ее размер.*/
+            max-width: 300px; /*Максимальная ширина*/
+            font-size: 13px;
+        }
+
+        .card {
+            height: 100%;
+        }
+
+        .card-header {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .row > div {
+            margin-bottom: 15px;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>Text shadow generation</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-4 col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary">Settings:</div>
+                <div class="card-body">
+                    <label for="font_size"> Font size </label>
+                    <input class="custom-range" id="font_size" type="range" min="8" max="40" step="1" value="40">
+                    <label for="offset_x"> Axial offset x </label>
+                    <input class="custom-range" id="offset_x" type="range" min="-15" max="15" step="1" value="4">
+                    <label for="offset_y"> Axial offset y </label>
+                    <input class="custom-range" id="offset_y" type="range" min="-15" max="15" step="1" value="-1">
+                    <label for="blur"> Blur </label>
+                    <input class="custom-range" id="blur" type="range" min="0" max="15" step="1" value="0">
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary">Color:</div>
+                <div class="card-body">
+                    <input type="color" value="#ff0000">
+                    <label for="opacity">Opacity</label>
+                    <input class="" id="opacity" type="range" min="0" max="1" step="0.01" value="1">
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-12">
+            <div class="card">
+                <div class="card-header bg-primary">Result:</div>
+                <div class="card-body">
+                    <label for="resultHex">HEX color</label>
+                    <textarea id="resultHex" rows="4" readonly></textarea><br>
+                    <label for="resultRgba">RGBA color</label>
+                    <textarea id="resultRgba" rows="4" readonly></textarea><br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    function cssShadow({
+                           font_size,
+                           offset_x,
+                           offset_y,
+                           blur,
+                           opacity,
+                           color,
+                           rgba
+                       }) {
+        const cssStyles = offset_x + "px " + offset_y + "px " + blur + "px " + rgba;
+        $("h1").css("text-shadow", cssStyles);
+        $("#resultHex").val("background-color: " + color + ";\nopacity: " + opacity + "\nfont-size: " + font_size + "px;");
+        $("#resultRgba").val("text-shadow: " + offset_x + "px " + offset_y + "px " + blur + "px " + rgba + ";\nfont-size: " + font_size + "px;");
+    }
+
+    cssShadow({
+        font_size: 40,
+        offset_x: 4,
+        offset_y: -1,
+        blur: 0,
+        opacity: 1,
+        color: "#ff0000",
+        rgba: "rgba(255,0,0,1)"
+    });
+    $(document).on("input change", "input", function () {
+        let font_size = $("#font_size").val();
+        let offset_x = $("#offset_x").val();
+        let offset_y = $("#offset_y").val();
+        let blur = $("#blur").val();
+        let opacity = $("#opacity").val();
+        let color = $("input[type='color']").val() + "";
+        let red16 = color[1] + "" + color[2];
+        let green16 = color[3] + "" + color[4];
+        let blue16 = color[5] + "" + color[6];
+        let red10 = parseInt(red16, 16);
+        let green10 = parseInt(green16, 16);
+        let blue10 = parseInt(blue16, 16);
+        let rgba = "rgba(" + red10 + ", " + green10 + ", " + blue10 + ", " + opacity + ")";
+        $("h1").css("fontSize", font_size + "px");
+        cssShadow({
+            font_size: font_size,
+            offset_x: offset_x,
+            offset_y: offset_y,
+            blur: blur,
+            opacity: opacity,
+            color: color,
+            rgba: rgba
+        });
+    })
+</script>
+</body>
+</html>
