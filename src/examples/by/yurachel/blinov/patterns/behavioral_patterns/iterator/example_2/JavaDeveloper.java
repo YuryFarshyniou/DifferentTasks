@@ -14,11 +14,7 @@ public class JavaDeveloper implements Collection {
 
         @Override
         public boolean hasNext() {
-            if (index < skills.length) {
-
-                return true;
-            }
-            return false;
+            return index < skills.length;
         }
 
         @Override

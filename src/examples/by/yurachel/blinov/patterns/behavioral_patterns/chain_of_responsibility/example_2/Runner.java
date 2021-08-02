@@ -9,9 +9,9 @@ public class Runner {
         report.setNextNotifier(email);
         email.setNextNotifier(sms);
 
-        report.notifyManager("ok", Priority.ROUTINE);
+//        report.notifyManager("ok", Priority.ROUTINE);
         report.notifyManager("something wrong", Priority.IMPORTANT);
-        report.notifyManager("we have big problem", Priority.ASAP);
+//        report.notifyManager("we have big problem", Priority.ASAP);
 
     }
 }
