@@ -40,12 +40,12 @@ public class Project implements Copyable {
         this.sourceCode = sourceCode;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Project{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", sourceCode='" + sourceCode + '\'' +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Project{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", sourceCode='" + sourceCode + '\'' +
+                '}';
+    }
 }

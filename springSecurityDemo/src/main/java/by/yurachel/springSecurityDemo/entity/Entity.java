@@ -1,4 +1,4 @@
-package by.yurachel.springSecurityDemo;
+package by.yurachel.springSecurityDemo.entity;
 
 import java.util.Objects;
 
@@ -20,6 +20,14 @@ public class Entity {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Entity(int id, String content) {
+        this.id = id;
+        this.content = content;
+    }
+
+    public Entity() {
     }
 
     @Override

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org/" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script
-            src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-            crossorigin="anonymous"></script>
-    <script src="static/ex.js">
-
-    </script>
+    <head>
+        <title>Hello CORS</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script th:src="@{/exampleJ.js}"></script>
+    </head>
 </head>
 <body>
 
 <div>
-    <p class="greeting-id">The ID is </p>
-    <p class="greeting-content">The message is </p>
+    <table id="entityTable">
+        <tr>
+            <th>id</th>
+            <th>message</th>
+        </tr>
+    </table>
 </div>
 
 

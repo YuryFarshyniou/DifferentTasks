@@ -1,10 +1,11 @@
-package by.yurachel.springSecurityDemo;
+package by.yurachel.springSecurityDemo.controller.usual;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class Cont {
+public class ControllerExample {
+
     @GetMapping("world")
     public String h() {
         return "/example";
