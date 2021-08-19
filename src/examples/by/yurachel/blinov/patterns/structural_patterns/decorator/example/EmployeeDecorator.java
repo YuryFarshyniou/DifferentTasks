@@ -6,10 +6,6 @@ package examples.by.yurachel.blinov.patterns.structural_patterns.decorator.examp
 public class EmployeeDecorator implements IEmployee {
     protected Employee employee;
 
-    public EmployeeDecorator() {
-        super();
-    }
-
     public EmployeeDecorator(Employee employee) {
         this.employee = employee;
     }
