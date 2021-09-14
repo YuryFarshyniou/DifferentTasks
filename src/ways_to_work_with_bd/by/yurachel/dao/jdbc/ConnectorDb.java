@@ -14,6 +14,7 @@ public class ConnectorDb {
 
     public static class ConnectorDBHolder {
         public static final ConnectorDb INSTANCE = new ConnectorDb();
+
     }
 
     public static ConnectorDb getInstance() {
@@ -21,7 +22,7 @@ public class ConnectorDb {
     }
 
     private ConnectorDb() {
-
+        System.out.println();
         String url = "jdbc:mysql://localhost:3306/phone_store";
         Properties prop = new Properties();
         prop.put("user", "Yurachel");

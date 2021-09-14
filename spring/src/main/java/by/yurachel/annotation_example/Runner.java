@@ -52,7 +52,7 @@ public class Runner {
             Animal animal = context.getBean("cat", Animal.class);
             VetClinic clinic = new VetClinic(animal);
             clinic.feedingPet();
-
+            System.out.println();
             Animal dog = context.getBean("dog", Animal.class);
             clinic.setAnimal(dog);
             clinic.feedingPet();

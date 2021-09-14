@@ -13,6 +13,7 @@ public abstract class Notifier {
     }
 
     public void notifyManager(String message, int level) {
+
         if (level >= priority) {
             write(message);
         }

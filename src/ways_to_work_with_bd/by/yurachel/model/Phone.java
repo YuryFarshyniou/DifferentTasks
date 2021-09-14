@@ -12,7 +12,7 @@ import java.util.Objects;
 @Table(name = "phones")
 @Cacheable
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-public class Phone implements Serializable {
+public class Phone extends Exception  implements Serializable  {
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")

@@ -30,7 +30,7 @@
 //5.Приорете операторов.Как в java.
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 
-//6.Условные операторы.(if как в java.ернарный оператор тоже есть.)
+//6.Условные операторы.(if как в java.Тернарный оператор тоже есть.)
 // == Проверяет по значеню(приводит к общему типу данных).=== Провереят по значению и типу данных(Приоритетный тип)
 // const courseStatus = "g"
 // if(courseStatus==="ready"){

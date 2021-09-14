@@ -2,9 +2,12 @@ package by.yurachel.spring_mvc.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import java.util.HashMap;
+
 public class MySpringDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
+
         return null;
     }
 
